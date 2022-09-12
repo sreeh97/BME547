@@ -5,8 +5,7 @@
              type of medical treatment or diagnostics.
 """
 
-
-def dose_amount():
+def patient_input():
     print("Day One Dosing Guidelines")
     print("")
     print("Choose diagnosis:")
@@ -15,6 +14,9 @@ def dose_amount():
     print("3 - Community-acquired pneumonia")
     print("4 - Pharyngitis/tonsilitis")
     diagnosis = int(input("Enter a number: "))
+    return diagnosis
+
+def patient_weight():
     print("PATIENT WEIGHT")
     print("Enter patient weight followed by units of kg or lb.")
     print("Examples:  65.3 lb      21.0 kg")
@@ -22,6 +24,9 @@ def dose_amount():
     weight_data = weight_input.split(" ")
     weight = float(weight_data[0])
     units = weight_data[1]
+    return weight, units
+
+def dose_amount(diagnosis,weight, units):
     if units == "lb":
         weight = weight / 2.205
     dosages_mg_per_kg = [30, 10, 10, 12]
@@ -34,5 +39,7 @@ def dose_amount():
 
 
 if __name__ == '__main__':
-    dose_amount()
+    diagnosis = patient_input()
+    weight, units = patient_weight()
+    dose_amount(diagnosis,weight, units)
 
