@@ -82,5 +82,5 @@ def total_driver():
     answer = Total_check(value)
     output_Total(value,answer)
     
-
-interface()
+if __name__ == "__main__":
+    interface()
