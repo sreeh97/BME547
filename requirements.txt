@@ -1,7 +1,0 @@
-wikipedia
-numpy
-matplotlib
-jupyter
-pytest
-pytest-pycodestyle
-
