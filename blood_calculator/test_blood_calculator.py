@@ -5,7 +5,6 @@ import pytest
      (50, "Borderline Low"),
      (30, "Low")
      ])
-
 def test_check_HDL(HDL, expected):
     from blood_calculator import check_HDL
     answer = check_HDL(HDL)
