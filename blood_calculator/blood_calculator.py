@@ -92,5 +92,6 @@ def total_driver():
     value = Total_Cholesterol()
     answer = Total_check(value)
 
+
 if __name__ == "__main__":
     interface()
