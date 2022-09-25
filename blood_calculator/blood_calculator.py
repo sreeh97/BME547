@@ -91,8 +91,6 @@ def output_Total(total, charac):
 def total_driver():
     value = Total_Cholesterol()
     answer = Total_check(value)
-    output_Total(value, answer)
-
 
 if __name__ == "__main__":
     interface()
