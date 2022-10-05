@@ -12,11 +12,15 @@ def get_full_name(patient):
 
 
 def print_database(db):
-    for patient in db:
-        print(patient)
-        print("Name: {}, id: {}, age: {}".format(get_full_name(db[patient]),
-                                                 db[patient]["Id"],
-                                                 db[patient]["Age"]))
+    for patient_key in db:
+        print(patient_key)
+        print("Name: {}, id: {}, age: {}".format(get_full_name(db[patient_key]),
+                                                 db[patient_key]["Id"],
+                                                 db[patient_key]["Age"]))
+    for patient in db.values():
+        print("Name: {}, id: {}, age: {}".format(get_full_name(patient),
+                                                 patient["Id"],
+                                                 patient["Age"]))
 
 
 def find_patient(db, id_no):
